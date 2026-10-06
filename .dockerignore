@@ -1,0 +1,5 @@
+# Only docker/install_packages.R is needed to build the image;
+# keep data and results out of the build context.
+data/
+results/
+.git/
