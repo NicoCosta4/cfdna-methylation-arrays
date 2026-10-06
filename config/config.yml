@@ -1,0 +1,52 @@
+# Analysis parameters. Every script reads this file, so changing a threshold
+# here changes it everywhere without touching the code.
+
+array: EPIC            # EPIC v1, hg19 annotation
+
+paths:
+  samplesheet: config/samplesheet.csv
+  idat_dir: data/idats
+  atlas: data/reference/moss2018_reference_atlas.csv
+  results_dir: results
+
+qc:
+  sample_detp_max: 0.05   # drop samples whose mean detection p-value is above this
+  probe_detp_max: 0.01    # keep probes detected (p < this) in every sample
+
+filtering:
+  remove_sex_chromosomes: true
+  remove_snp_probes: true
+  remove_cross_reactive: true
+
+dmp:
+  group_column: Sample_Group
+  unit_column: Unit_ID         # technical replicates sharing a unit are averaged
+  contrast: Cancer - Healthy   # primary comparison
+  sepsis_contrast: Sepsis - Healthy   # used by the biomarker specificity filter
+  fdr_max: 0.05
+  min_abs_delta_beta: 0.1
+
+biomarker:
+  # Filter 2 — not inflammation-driven: drop CpGs that shift in sepsis in the same
+  # direction as in cancer by at least this delta-beta
+  sepsis_max_same_direction_delta: 0.05
+  # Filter 3 — low background in blood: hypermethylated candidates must be
+  # unmethylated in every leukocyte type (and the reverse for hypomethylated ones)
+  blood_max_beta_for_hyper: 0.2
+  blood_min_beta_for_hypo: 0.8
+  # Filter 4 — altered in the tumors themselves (TCGA tumor vs normal tissue)
+  tcga_projects: [TCGA-COAD, TCGA-BRCA, TCGA-LUAD, TCGA-LUSC]
+  tcga_samples_per_group: 20
+  tcga_min_abs_delta_beta: 0.1
+  tcga_min_projects: 2        # same direction as in cfDNA in at least this many tumor types
+  # Core panel — a compact, assay-sized subset of the signature: hypermethylated
+  # CpGs only, altered in every TCGA tumor type, near-zero blood background,
+  # located in CpG islands of gene promoters (easier to interpret biologically
+  # and to design targeted assays), ranked by cfDNA significance
+  panel_size: 30
+  panel_blood_max_beta: 0.1
+  panel_island_relations: [Island]     # add N_Shore, S_Shore to include shores
+  panel_gene_regions: [promoter]
+  # One representative CpG per gene (the most significant); the number of eligible
+  # CpGs in the same gene is reported as regional support
+  panel_one_cpg_per_gene: true
