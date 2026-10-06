@@ -1,0 +1,38 @@
+"Unit_ID","Sample_Group","Disease","score"
+"healthy_individual_1","Healthy","Normal",0.0651339912028001
+"healthy_individual_2","Healthy","Normal",0.0744351032293024
+"healthy_individual_3","Healthy","Normal",0.0582462169733838
+"healthy_individual_4","Healthy","Normal",0.0675072481277932
+"old_female_pool","Healthy","Normal",0.0650299445602587
+"old_male_pool","Healthy","Normal",0.0689712264925691
+"young_female_pool","Healthy","Normal",0.0594730552886311
+"young_male_pool","Healthy","Normal",0.0612184384485704
+"breast_cancer_1040","Cancer","Breast adenocarcinoma",0.397281145536067
+"breast_cancer_1438","Cancer","Breast adenocarcinoma",0.374644001263732
+"breast_cancer_1711","Cancer","Breast adenocarcinoma",0.423128157669507
+"CUP_1149","Cancer","Cancer of Unkown Primary",0.273793368938158
+"CUP_1302","Cancer","Cancer of Unkown Primary",0.114899041434391
+"CUP_1322","Cancer","Cancer of Unkown Primary",0.333575289487786
+"CUP_1936_1994","Cancer","Cancer of Unkown Primary",0.209683627408005
+"colon_cancer_2010","Cancer","Colon adenocarcinoma",0.27595864238501
+"colon_cancer_684","Cancer","Colon adenocarcinoma",0.342214101237748
+"colon_cancer_806","Cancer","Colon adenocarcinoma",0.421080036430305
+"lung_cancer_1","Cancer","Non-small-cell lung carcinoma",0.113457801562357
+"lung_cancer_1433","Cancer","Non-small-cell lung carcinoma",0.0865665720530705
+"lung_cancer_1478","Cancer","Non-small-cell lung carcinoma",0.088634927474696
+"lung_cancer_2244","Cancer","Small-cell lung carcinoma",0.0958571418053424
+"sepsis_16","Sepsis","Sepsis",0.0885909600813151
+"sepsis_17","Sepsis","Sepsis",0.0915611491522062
+"sepsis_18","Sepsis","Sepsis",0.0863451470776151
+"sepsis_2","Sepsis","Sepsis",0.279324344312972
+"sepsis_20","Sepsis","Sepsis",0.0823779695926844
+"sepsis_23","Sepsis","Sepsis",0.0804363966660117
+"sepsis_26","Sepsis","Sepsis",0.0898205789312104
+"sepsis_3","Sepsis","Sepsis",0.0931972206659545
+"sepsis_31","Sepsis","Sepsis",0.0807374469293169
+"sepsis_34","Sepsis","Sepsis",0.0843923596978213
+"sepsis_4","Sepsis","Sepsis",0.0834992711139828
+"sepsis_45","Sepsis","Sepsis",0.0733182343252453
+"sepsis_49","Sepsis","Sepsis",0.0845255636046211
+"sepsis_5","Sepsis","Sepsis",0.0854038526407505
+"sepsis_55","Sepsis","Sepsis",0.0794797665870919

@@ -1,0 +1,5 @@
+"step","hyper","hypo","total"
+"1. DMP in cancer vs healthy cfDNA",25282,18812,44094
+"2. Not shifted in sepsis",9798,11410,21208
+"3. Low background in leukocytes",5514,6524,12038
+"4. Altered in TCGA tumors",3720,1485,5205
