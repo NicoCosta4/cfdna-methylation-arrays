@@ -1,0 +1,19 @@
+# Raw and intermediate data are downloaded/regenerated, never committed
+data/
+results/rds/
+*.rds
+*.RData
+*.idat
+*.idat.gz
+*.tar
+
+# R / RStudio
+.Rhistory
+.Rproj.user/
+*.Rproj
+
+# macOS
+.DS_Store
+
+# Temporary download manifest written by TCGAbiolinks::GDCdownload()
+MANIFEST.txt
